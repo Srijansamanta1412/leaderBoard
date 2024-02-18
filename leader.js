@@ -40,7 +40,7 @@ let displayUpdatedList = () => {
     document.getElementById('playerList').innerHTML=''
     playerList.sort(function (a, b) {
         if(a.score==b.score)
-        return a.name-b.name 
+        return a.name.localeCompare(b.name);
         return a.score - b.score })
     console.log(playerList)
     for (let i = 0; i < playerList.length; i++) {
