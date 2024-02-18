@@ -1,30 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leader Board</title>
 </head>
+<style>
+    input{
+        height:2rem;
+        width: 16rem;
+        border: 1px solid lightgreen;
+        color:1px solid lightgreen;
+    }
+    button{
+        background-color: lightgreen;
+    }
+</style>
+
 <body>
     <div style="text-align: center;">
         <h1>
             Leader Board
         </h1>
     </div>
-    <div style="text-align: center;">
-        <label for="firstName">First Name :</label>
-        <input type="text" id="firstName"placeholder="Enter Your First Name">
-        <label for="lastName">Last Name :</label>
-        <input type="text" id="lastName" placeholder="Enter Your Last Name">
-        <label for="country">Your Country</label>
-        <input type="text" id="country" placeholder="Enter Your Country">
-        <label for="score">Player Score :</label>
-        <input type="search" id="score" placeholder="Enter Your Player Score">
-        <button onclick="addPlayer()"> Add Player</button>
+    <div style="margin-left: 90px;margin-right: 90px;">
+        <div style="display: flex; justify-content: space-between; margin-bottom: 15px;">
+
+            <input type="text" id="firstName" placeholder="Enter Your First Name">
+
+            <input type="text" id="lastName" placeholder="Enter Your Last Name">
+
+            <input type="text" id="country" placeholder="Enter Your Country">
+
+            <input type="text" id="score" placeholder="Enter Your Player Score">
+
+            <button onclick="addPlayer()"> Add Player</button>
+        </div>
+        <div id="playerList">
+
+        </div>
     </div>
-    <div id="playerList">
-        
-    </div>
+    <script src="https://rawgit.com/moment/moment/2.2.1/min/moment.min.js"></script>
     <script src="leader.js"></script>
 </body>
+
 </html>
